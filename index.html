@@ -339,7 +339,7 @@
             <GhostButton onClick={() => scrollToId('services')}>View Services &amp; Pricing</GhostButton>
           </div>
           <div className="mt-10 grid grid-cols-3 gap-4 max-w-lg animate-fade-up" style={{ animationDelay:'.32s' }}>
-            {[{ ic:I.clock, t:'Open 7 Days', s:'10 AM – 9 PM' },{ ic:I.heart, t:'Walk-ins', s:'Welcome (Apts Preferred)' },{ ic:I.shield, t:'Since 2009', s:'Trusted locally' }].map((x,i) => (
+            {[{ ic:I.clock, t:'Open 7 Days', s:'10 AM – 9 PM' },{ ic:I.heart, t:'Walk-ins', s:'Welcome (Appointments Preferred)' },{ ic:I.shield, t:'Since 2009', s:'Trusted locally' }].map((x,i) => (
               <div key={i} className="rounded-2xl bg-white ring-1 ring-brand-100 shadow-soft px-4 py-3">
                 <Icon d={x.ic} className="w-6 h-6 text-brand-500" />
                 <div className="mt-1.5 font-heading font-semibold text-sm text-navy leading-tight">{x.t}</div>
