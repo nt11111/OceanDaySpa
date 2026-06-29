@@ -128,7 +128,7 @@
       rows:[{label:'60 min',cash:140,card:150},{label:'90 min',cash:210,card:220}] },
   ];
   const COMBO = { label:'1-Hour Combo · 30 min foot + 30 min body', cash:70, card:75 };
-  const ADDON = 'Aromatherapy essential oil, hot stones, or sea-salt scrub — add $20';
+  const ADDON = 'Aromatherapy essential oil, hot stones, or sea-salt scrub — add $30';
 
   const TESTIMONIALS = [
     { name:'Neil Todkar', source:'Google', stars:5, text:'My mom and I were absolutely blown away. From the moment we walked in, the service was warm, respectful and attentive. The massages were phenomenal and the space was clean, quiet, and designed to melt your stress away. We will absolutely be coming back.' },
@@ -326,20 +326,20 @@
             <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-50 ring-1 ring-brand-100 px-3.5 py-1.5 text-sm font-heading font-semibold text-brand-600"><Icon d={I.shield} className="w-4 h-4" /> Est. 2009</span>
           </div>
           <h1 className="mt-6 font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.03] text-navy animate-fade-up" style={{ animationDelay:'.08s' }}>
-            Find your calm in <span className="brand-grad-text italic">Pleasanton.</span>
+            Find your calm in <span className="brand-grad-text italic">Pleasanton, CA.</span>
           </h1>
           <p className="mt-4 inline-flex items-center gap-1.5 text-brand-600 font-heading font-semibold animate-fade-up" style={{ animationDelay:'.13s' }}>
             <Icon d={I.pin} className="w-5 h-5" /> Pleasanton, CA · Mission Plaza
           </p>
           <p className="mt-3 text-lg sm:text-xl text-ink/75 max-w-xl animate-fade-up" style={{ animationDelay:'.16s' }}>
-            A peaceful, spotless massage retreat in the heart of Pleasanton, CA — family-run and trusted since 2009. Skilled, caring hands and an hour that's all about you.
+            A peaceful, spotless massage retreat in the heart of Pleasanton, CA. Professionally run and trusted since 2009. Skilled, caring hands and an hour that's all about you.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3 animate-fade-up" style={{ animationDelay:'.24s' }}>
             <CallButton className="!px-8 !py-4 text-base" label={'Call to Book · ' + SPA.phone} />
             <GhostButton onClick={() => scrollToId('services')}>View Services &amp; Pricing</GhostButton>
           </div>
           <div className="mt-10 grid grid-cols-3 gap-4 max-w-lg animate-fade-up" style={{ animationDelay:'.32s' }}>
-            {[{ ic:I.clock, t:'Open 7 Days', s:'10 AM – 9 PM' },{ ic:I.heart, t:'Walk-ins', s:'Welcome' },{ ic:I.shield, t:'Since 2009', s:'Trusted locally' }].map((x,i) => (
+            {[{ ic:I.clock, t:'Open 7 Days', s:'10 AM – 9 PM' },{ ic:I.heart, t:'Walk-ins', s:'Welcome (Apts Preferred)' },{ ic:I.shield, t:'Since 2009', s:'Trusted locally' }].map((x,i) => (
               <div key={i} className="rounded-2xl bg-white ring-1 ring-brand-100 shadow-soft px-4 py-3">
                 <Icon d={x.ic} className="w-6 h-6 text-brand-500" />
                 <div className="mt-1.5 font-heading font-semibold text-sm text-navy leading-tight">{x.t}</div>
@@ -401,8 +401,8 @@
 
   /* ─────────────────────────  LIMITED-TIME OFFERS  ───────────────────────── */
   const OFFERS = [
-    { title:'Aromatherapy Massage', sub:'1 hour · with hot stones & sea-salt scrub', was:165, now:80, image:'images/new-hotstone.jpg' },
-    { title:'Couples Aromatherapy Massage', sub:'with hot stones & sea-salt scrub', was:330, now:160, image:'images/ods12.webp' },
+    { title:'Aromatherapy Massage', sub:'1 hour · essential oils with hot stones & sea-salt scrub', was:165, now:80, image:'images/new-hotstone.jpg' },
+    { title:'Couples Aromatherapy Massage', sub:'essential oils with hot stones & sea-salt scrub', was:330, now:160, image:'images/ods12.webp' },
   ];
   const Sale = () => (
     <section id="offers" className="relative py-24 scroll-mt-16 bg-brand-50 overflow-hidden">
@@ -504,7 +504,7 @@
             </div>
           </div>
         </Reveal>
-        <p className="mt-6 text-center text-sm text-ink/55">Open 7 days · 10 AM – 9 PM · Walk-ins welcome · Call {SPA.owner} at <a href={SPA.phoneHref} className="text-brand-600 font-semibold">{SPA.phone}</a></p>
+        <p className="mt-6 text-center text-sm text-ink/55">Open 7 days · 10 AM – 9 PM · Walk-ins welcome (Appointments Preferred) · Call {SPA.owner} at <a href={SPA.phoneHref} className="text-brand-600 font-semibold">{SPA.phone}</a></p>
       </div>
     </section>
   );
@@ -514,8 +514,8 @@
     const items = [
       { ic:I.user, t:'Skilled, caring hands', d:'Guests return for years for Kelly and her team — professional technique with a genuinely warm welcome.' },
       { ic:I.sparkle, t:'Spotless & serene', d:'A clean, quiet, beautifully kept space designed to melt your stress the moment you arrive.' },
-      { ic:I.heart, t:'Treated like family', d:'Respectful, attentive care from a locally-loved, family-run spa that remembers your name.' },
-      { ic:I.shield, t:'Easy & welcoming', d:'Walk-ins welcome, wheelchair accessible, cards accepted, with street & lot parking.' },
+      { ic:I.heart, t:'Treated like family', d:'Respectful, attentive care from a loving, family-run spa that remembers you.' },
+      { ic:I.shield, t:'Easy & welcoming', d:'Walk-ins welcome(Appts preferred, wheelchair accessible, cards accepted, with convenient parking.' },
     ];
     return (
       <section id="why" className="relative py-24 bg-brand-600 text-white overflow-hidden scroll-mt-16">
@@ -524,9 +524,9 @@
         <div className="relative mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-2 gap-14 items-center">
           <Reveal>
             <Eyebrow light>Why Ocean Day Spa</Eyebrow>
-            <h2 className="mt-4 font-display text-4xl sm:text-5xl">An hour that truly feels like one</h2>
-            <p className="mt-5 text-white/85 text-lg leading-relaxed">Real relief, a tranquil room, and people who care that you leave better than you arrived. The kind of place guests quietly keep to themselves.</p>
-            <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-white/10 ring-1 ring-white/20 px-4 py-1.5 font-heading text-sm"><Icon d={I.shield} className="w-4 h-4 text-seafoam-200" /> Established 2009 · family-run in Pleasanton</div>
+            <h2 className="mt-4 font-display text-4xl sm:text-5xl">An hour of peaceful calm and comfort</h2>
+            <p className="mt-5 text-white/85 text-lg leading-relaxed">Therapeutic relief in tranquil settings, and professionals who care that you leave feeling better than you arrived.</p>
+            <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-white/10 ring-1 ring-white/20 px-4 py-1.5 font-heading text-sm"><Icon d={I.shield} className="w-4 h-4 text-seafoam-200" /> Established 2009 · Professionally run in Pleasanton, CA</div>
             <div className="mt-7 flex flex-wrap gap-8">
               <div><div className="font-display text-5xl text-seafoam-200"><CountUp to={SPA.rating} decimals={1} /><span className="text-3xl">★</span></div><div className="text-sm text-white/70">average rating</div></div>
               <div className="w-px bg-white/20" />
@@ -557,7 +557,7 @@
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal className="text-center max-w-2xl mx-auto">
           <Eyebrow>Step Inside</Eyebrow>
-          <h2 className="mt-4 font-display text-4xl sm:text-5xl text-navy">A space made for calm</h2>
+          <h2 className="mt-4 font-display text-4xl sm:text-5xl text-navy">A space made for calm & relaxation</h2>
           <p className="mt-4 text-ink/70 text-lg">Soft light, quiet corners and thoughtful details throughout. Tap any photo to explore.</p>
         </Reveal>
         <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[200px]">
@@ -625,20 +625,20 @@
           <span className="mt-6 grid place-items-center w-20 h-20 mx-auto rounded-full bg-white shadow-card ring-1 ring-brand-100">
             <img src={BADGE} alt="" className="w-12 h-12" />
           </span>
-          <h2 className="mt-5 font-display text-4xl sm:text-5xl text-navy">Kelly Zheng</h2>
+          <h2 className="mt-5 font-display text-4xl sm:text-5xl text-navy">Kelly (Haiyan) Zheng</h2>
           <p className="mt-1 font-heading text-sm uppercase tracking-[0.18em] text-brand-500">Owner &amp; Lead Massage Therapist</p>
           <Icon d={I.quote} className="w-10 h-10 mx-auto mt-6 text-brand-200" />
           <p className="mt-3 text-ink/80 text-lg leading-relaxed">
-            Since 2009 — more than fifteen years — Kelly has devoted herself to the healing power of touch. What began as a deep passion for helping
-            people feel whole again grew into Ocean Day Spa, a calm harbor she has tended by hand and from the heart for the community she loves.
+            Established in 2009. For 17 years Kelly has devoted herself to the healing powers of massage. What began as a deep passion for helping
+            people feel renewed again grew into Ocean Day Spa, a calm respite she has tended by hand and from the heart for the community she loves.
           </p>
           <p className="mt-4 text-ink/80 text-lg leading-relaxed">
-            Kelly believes <span className="text-brand-600 font-semibold">everyone</span> who walks through her door deserves to be seen, cared for, and sent home a little lighter.
-            She listens, she tailors every session to you, and she treats each guest like family. That care is exactly why people keep coming back.
+            Kelly believes <span className="text-brand-600 font-semibold">everyone</span> who walks through her door deserves to be warmly welcomed, cared for, and enjoys quality relaxation that repays them in energy and focus.
+            She listens and tailors every session to your desired needs with the hope that your memorable experience will motivate your return visit.
           </p>
           <div className="mt-7 inline-flex items-center gap-3 rounded-full bg-white ring-1 ring-brand-100 shadow-soft px-5 py-2.5">
             <span className="font-display text-2xl text-brand-600">Kelly Zheng</span>
-            <span className="text-sm text-ink/55 font-heading">— with love, for Pleasanton</span>
+            <span className="text-sm text-ink/55 font-heading">— with love, from Pleasanton</span>
           </div>
           <div className="mt-9"><CallButton className="!px-8 !py-4" label={'Book with Kelly · ' + SPA.phone} /></div>
         </Reveal>
@@ -690,7 +690,7 @@
         <Reveal>
           <Eyebrow light>Booking</Eyebrow>
           <h2 className="mt-4 font-display text-4xl sm:text-5xl">Ready to unwind?</h2>
-          <p className="mt-4 text-white/85 text-lg">No apps, no forms — just call <span className="font-semibold">{SPA.owner}</span> and she'll find the perfect time for you.</p>
+          <p className="mt-4 text-white/85 text-lg">Call <span className="font-semibold">{SPA.owner}</span> today and she'll find the perfect time for you.</p>
           <a href={SPA.phoneHref} className="group mt-9 inline-flex items-center gap-4 rounded-full bg-white text-brand-600 font-heading font-bold pl-6 pr-7 py-4 shadow-glow hover:-translate-y-0.5 transition-transform cursor-pointer">
             <span className="grid place-items-center w-11 h-11 rounded-full bg-brand-500 text-white group-hover:scale-105 transition-transform"><Icon d={I.phone} className="w-5 h-5" /></span>
             <span className="text-left leading-tight">
@@ -698,7 +698,7 @@
               <span className="block text-2xl">{SPA.phone}</span>
             </span>
           </a>
-          <p className="mt-6 text-white/75 text-sm">Open 7 days · 10 AM – 9 PM · Walk-ins welcome</p>
+          <p className="mt-6 text-white/75 text-sm">Open 7 days · 10 AM – 9 PM · Walk-ins welcome (Appointments Preferred)</p>
         </Reveal>
       </div>
     </section>
